@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+  max-width: 1370px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  float: none !important;
+}
+.fas{
+  font-family: "Font Awesome 5 Pro";
+}
+.row {
+  width: 100%;
+}
+.p_t {
+  padding: 60px 0;
+}
+.login-form {
+  margin: 0 auto;
+  width: 360px;
+  padding: 30px 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: #d8e7fe;
+  border: solid 1px #ebe8e8;
+  color: #666;
+  height: 400px;
+}
+.login-form-input label{
+  color: #202560;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+::placeholder{
+  font-size: 15px;
+}
+.userlists .deactivate-btn i{
+  background-color: #dc3545 !important;
+    padding: 6px !important;
+    font-size: 16px;
+    width: 26px;
+    margin-left: 20px;
+}
+.act-btn{
+  color: #fff !important;
+  background-color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+  box-shadow: none !important;
+  padding: 5px !important;
+  border-radius: 3px !important;
+  font-size: 16px;
+}
+
+.login-form-input select,
+.login-form-input input[type="text"],
+.login-form-input input[type="file"],
+.login-form-input input[type="url"],
+.login-form-input input[type="number"],
+.login-form-input input[type="password"],
+.login-form-input input[type="email"],
+.login-form-input input[type="tel"] {
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 transparent;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.login-form-input button,
+.show-btn {
+  background: #273b7a;
+  color: #fff;
+  padding: 10px 32px;
+  margin: -63px 0 0 0;
+  float: right;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.login-form-input button:hover {
+  background-color: #182f7c;
+  color: #fff;
+}
+.logo {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.header-fixed .login-form-input {
+  width: 360px;
+  background-color: #c0c5df;
+  padding: 30px;
+  margin: 0 auto;
+  height: 300px;
+  border-radius: 5px;
+}
+.center {
+  text-align: center;
+}
+.show-btn {
+  display: inline-block;
+  margin: 15px auto !important;
+  float: none;
+}
+.userlists table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+  margin-top: 20px;
+}
+.userlists.row.p_t h1 {
+  font-size: 25px;
+}
+.userlists table th,
+.userlists table td {
+  text-align: left;
+  padding: 15px 12px;
+  font-size: 20px;
+  border: 1px solid #dee2e6;
+}
+
+.userlists table td {
+  font-size: 18px;
+}
+
+.userlists table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.userlists table tr:nth-child(1) {
+  background: #fff6b9fa;
+}
+
+.userlists table th {
+  color: #212529;
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+.userlists button {
+  background: green;
+  padding: 10px 32px;
+  color: #fff;
+}
+
+.form-inline .checkbox {
+  margin-left: 2px;
+}
+
+.form-inline .checkbox input.form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.form-inline .checkbox label {
+  display: inline-flex;
+  margin-top: 5px;
+}
+
+.login-form .form-inline {
+  margin: 35px 0;
+}
+
+.signup-link {
+  margin: 60px 0 0;
+  text-align: center;
+}
+
+.signup-link a {
+  display: inline-block;
+  width: 100%;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+  margin-top: 15px;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+body.header-fixed.row.p_t h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h4.alert.alert-danger.mt-4 {
+  text-align: center;
+  margin-top: 20px;
+  /* float: left; */
+  color: #ff0000;
+}
+
+.float-right.d-none.d-sm-block {
+  margin-left: 30px;
+}
+
+.cust-navbar-white {
+  background: #d8e7fe;
+  color: #ffffff;
+  box-shadow: 10px 2px 13px #9b9595;
+  margin: -10px 0 0;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px 7.5px;
+}
+
+.navbar-expand-md .navbar-collapse {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: row;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.navbar-nav .nav-link {
+  color: #202560;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px 25px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+a.admin-register-btn {
+  background: #273b7a;
+  color: #fff;
+  padding: 10px 32px;
+  float: right;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.userlists tr td i {
+  color: #fff !important;
+  background-color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+  box-shadow: none !important;
+  padding: 5px !important;
+  border-radius: 3px !important;
+}
+.userlists tr td .fa-edit:before {
+  position: relative;
+  left: 2px;
+}
+.userlists tr td .fa-trash-alt {
+  background-color: #dc3545 !important;
+  padding: 6px !important;
+  font-size: 16px;
+}
+.deact-btn{
+  background-color: #dc3545 !important;
+  padding: 5px !important;
+  font-size: 16px;
+  border-radius: 5px;
+    color: #fff;
+}
+.login-form .form-group {
+  float: left;
+  width: 100%;
+}
+.admin-login-form .form-group {
+  display: flex;
+}
+.admin-login-form .input-div {
+  flex-basis: 90%;
+}
+.logout{
+  margin-right: 40px;
+}
+.logout i {
+  margin-right: 10px;
+  font-size: 25px;
+  color: #000;
+  position: relative;
+  top: 3px;
+}
+.logout a{
+  color: #202560;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 25px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.main-header iconify-icon{
+  margin-right: 10px;
+  position: relative;
+  top: 7px;
+}
+.showbtndiv{margin: 30px 0;}
+.showbtndiv .show-button{
+  background: #273b7a;
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+.edit-passwordrow .login-form-input button{
+  margin: 50px 25px 0 0;
+}
+.subadmins-lists h1{
+  float: left;
+}
+.subadmins-lists .admin-register-btn{
+  float: right;
+  margin: 0 0 30px 0;
+}
+.user-list-page .update-btn{
+  margin-right: 12px;
+}
+.dblogo img{
+  height: 86px;
+}
+.llogin-page .login-form-input label{
+  color: inherit;
+    font-weight: 400;
+    font-size: 16px;
+}
+.llogin-page .form-check-input{
+  width: 14px !important;
+  height: 16px !important;
+  margin-top: 5px;
+}
+

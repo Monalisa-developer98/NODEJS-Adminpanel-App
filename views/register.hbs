@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registration Page</title>
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <body>
+<nav class="main-header navbar navbar-expand-md navbar-light cust-navbar-white p-1">
+
+  <div class="container-fluid">
+    <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/auth/admindashboard" class="nav-link"><iconify-icon icon="ri:admin-fill" style="color: #202560;" width="28" height="25"></iconify-icon>Super Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/auth/adminedit" class="nav-link"><iconify-icon icon="material-symbols:settings" style="color: #202560;" width="28" height="28"></iconify-icon>Settings</a>
+                    </li>
+                    
+                    
+                </ul>
+      <div class="logout">
+                    <a href="/auth/logout" class="delete-btn btn-sm"><i class="fas fa-sign-out"></i>Log Out</a>
+                </div>
+    </div>
+  </div>
+</nav>
+    <div class="authentication-theme row p_t">
+      <div class="row">
+        <div class="wrapper">
+
+         <div class="login-form">
+               
+                  <form action="/auth/register" method="POST" class="login-form-input" enctype="multipart/form-data">                    
+                    <div class="form-group input-rounded">
+                      <label for="fname">First Name</label>
+                      <input type="text" class="form-control" placeholder="Enter First Name" id="fname" name="fname" minlength="4" maxlength="64" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="lname">Last Name</label>
+                      <input type="text" class="form-control" placeholder="Enter Last Name" id="lname" name="lname" minlength="4" maxlength="64" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="tcode">Tenant Code</label>
+                      <input type="text" class="form-control" placeholder="Enter Tenant Code" id="tcode" name="tcode" minlength="4" maxlength="32"/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="email">E-Mail</label>
+                      <input type="email" class="form-control" placeholder="Enter E-Mail" id="email" name="email" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                       <label for="licnum">License for Tenant</label>
+                      <input type="number" class="form-control" placeholder="Enter License for tenant" id="licnum" name="licnum" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" placeholder="Enter Password" id="password" name="password" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="logofile">Logo</label>
+                      <input type="file" class="form-control" name="logofile" id="logofile" placeholder="Logo" />
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="bkimgfile">Background Image</label>
+                      <input type="file" class="form-control" name="bkimgfile" id="bkimgfile" placeholder="Background Image"/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="apiurl">API Url</label>
+                      <input type="url" class="form-control" name="apiurl" id="apiurl" placeholder="Enter API Url" />
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="activate-deactive">Activate/Deactivate</label>
+                      <select name="dropdown" id="dropdown">
+                        <option value="Activate">Activate</option>
+                        <option value="Deactivate">Deactivate</option>
+                      </select>
+                     
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"> Create Tenant </button>
+
+                  </form> 
+
+                  {{#if message}}
+                    <h4 class="alert alert-danger mt-4">{{message}}</h4>
+                  {{/if}}
+         </div>
+         
+
+                </div>
+        </div>
+      </div>
+
+    <footer class="main-footer"
+      style="background:url('/images/footer-logo.jpg'); background-repeat: round; width: 100%; height: 242px;">
+      <div class="float-right d-none d-sm-block">
+      </div>
+    </footer>
+
+    <style>
+      .login-form {
+        margin: 0 auto;
+        width: 1040px;
+        padding: 30px 20px;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        border: solid 1px #ebe8e8;
+        color: #666;
+        height: 640px;
+      }
+
+      .form-group.input-rounded {
+        width: 48%;
+        float: left;
+        margin: 15px 15px 0 0;
+      }
+
+      .login-form-input button, .show-btn {
+        margin: 20px 25px 0 0;    
+      }
+    </style>
+  </body>
+</html>

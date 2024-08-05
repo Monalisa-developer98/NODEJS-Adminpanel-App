@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sub Admin Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+<nav class="main-header navbar navbar-expand-md navbar-light cust-navbar-white p-1">
+
+  <div class="container-fluid">
+    <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+                        <a href="/subadmindashboard" class="nav-link"><iconify-icon icon="clarity:dashboard-solid" style="color: #202560;" width="28" height="28"></iconify-icon>Dashboard</a>
+                    </li>
+        <li class="nav-item">
+                        <a href="/auth/subadminedit/{{this.id}}" class="nav-link"><iconify-icon icon="material-symbols:settings" style="color: #202560;" width="28" height="28"></iconify-icon>Settings</a>
+                    </li>
+        <li class="nav-item">
+          <a href="/auth/users" class="nav-link"><iconify-icon icon="fa-solid:users" style="color: #202560;" width="28" height="28"></iconify-icon>Users</a>
+        </li>
+      </ul>
+      <div class="logout">
+                    <a href="/auth/logout" class="delete-btn btn-sm"><i class="fas fa-sign-out"></i>Log Out</a>
+                </div>
+    </div>
+  </div>
+</nav>
+  <body class="header-fixed row">    
+    <div class="row" >
+      <div class="wrapper">
+
+        <h1>Create Users</h1>
+        <form action="/auth/createUser" method="POST" class="login-form-input create-user-form">        
+        
+                    <div class="form-group input-rounded">
+                      <label for="fname">First Name</label>
+                      <input type="text" class="form-control" placeholder="Enter First Name" id="fname" name="fname" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="lname">Last Name</label>
+                      <input type="text" class="form-control" placeholder="Enter Last Name" id="lname" name="lname" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="empId">Employee ID (optional)</label>
+                      <input type="text" class="form-control" placeholder="Enter Employee ID" id="empId" name="empId" />
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="email">E-Mail</label>
+                      <input type="email" class="form-control" placeholder="Enter E-Mail" id="email" name="email" required/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <label for="phnum">Phone Number</label>
+                      <input type="tel" class="form-control" placeholder="Enter Phone Number" name="phnum" id="phnum" required>
+                    </div>             
+           <button type="submit" class="btn btn-primary btn-block">Create User</button>
+        </form>
+        {{#if message}}
+             <h4 class="alert alert-danger mt-4">{{message}}</h4>
+         {{/if}}
+
+      </div>
+    </div>
+    
+    <div class="user-listing-row row">
+      <div class="row">
+        <div class="wrapper">
+                    <div class="showbtndiv center">
+           <a href="/auth/users" class="show-btn show-user-button">Show all Users</a>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <footer class="main-footer"
+      style="background:url('/images/footer-logo.jpg'); background-repeat: round; width: 100%; height: 242px;">
+      <div class="float-right d-none d-sm-block">
+      </div>
+    </footer>
+    <style>      
+
+      .header-fixed .login-form-input {
+        margin: 0 auto;
+        width: 1040px;
+        padding: 30px 20px;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        border: solid 1px #ebe8e8;
+        color: #666;
+        height: 375px;
+      }
+    
+      .form-group.input-rounded {
+        width: 48%;
+        float: left;
+        margin: 15px 15px 0 0;
+      }
+    
+      .login-form-input button,
+      .show-btn {
+        margin: 20px 25px 0 0;
+      }
+
+      body.header-fixed.row h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    .create-user-form button{
+        margin: 45px 25px 0 0;
+      }
+      
+        footer.main-footer {
+          margin: 10px 0 0 0;
+        }
+    </style>
+
+  </body>  
+</html>

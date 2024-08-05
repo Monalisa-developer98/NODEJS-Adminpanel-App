@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users List</title>
+  <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+<nav class="main-header navbar navbar-expand-md navbar-light cust-navbar-white p-1">
+
+    <div class="container-fluid">
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+        <li class="nav-item">
+                        <a href="/subadmindashboard" class="nav-link"><iconify-icon icon="clarity:dashboard-solid" style="color: #202560;" width="28" height="28"></iconify-icon>Dashboard</a>
+                    </li>
+        <li class="nav-item">
+                        <a href="/auth/subadminedit/{{this.id}}" class="nav-link"><iconify-icon icon="material-symbols:settings" style="color: #202560;" width="28" height="28"></iconify-icon>Settings</a>
+                    </li>
+        <li class="nav-item">
+          <a href="/auth/userslist" class="nav-link"><iconify-icon icon="fa-solid:users" style="color: #202560;" width="28" height="28"></iconify-icon>Users</a>
+        </li>
+      </ul>
+            <div class="logout">
+                    <a href="/auth/logout" class="delete-btn btn-sm"><i class="fas fa-sign-out"></i>Log Out</a>
+                </div>
+        </div>
+    </div>
+</nav>
+    <div class="userlists row p_t">
+        <div class="wrapper">
+            <div class="row">
+                <h1>Users List</h1>
+                    <table>
+                        <tr>
+                        {{!-- <th>ID</th> --}}
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                        
+                        </tr>
+                        {{#each users}}
+                        <tr>
+                            {{!-- <td>{{this.id}}</td> --}}
+                            <td>{{this.name}}</td>
+                            <td>{{this.last_name}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.phone}}</td>
+                            {{!-- <td><button type="button" class="edit-btn" data-toggle="modal" data-target="#myApp">Edit</button></td> --}}
+                            <td><a href="/auth/delete/{{this.id}}" class="delete-btn btn-sm"><i class="fas fa-trash-alt"></i></a></td>
+                            
+                        </tr>
+                        {{/each}}
+                    </table>
+
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer"
+        style="background:url('/images/footer-logo.jpg'); background-repeat: round; width: 100%; height: 242px;">
+        <div class="float-right d-none d-sm-block">
+        </div>
+    </footer>
+
+    <style>
+        .p_t {
+            padding: 20px 0;
+        }   
+       
+    </style>
+
+</body>
+</html>
